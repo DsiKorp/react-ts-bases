@@ -21,6 +21,10 @@ function getUser(): User {
   };
 }
 
+// "Envolviendo el objeto con paréntesis" porque, 
+// al usar funciones de flecha en JavaScript, es esencial envolver el objeto que deseas
+// retornar implícitamente en paréntesis. Esto evita que el intérprete confunda las llaves 
+// del objeto con el cuerpo de la función, permitiéndote retornar el objeto de manera efectiva
 const getUser2 = () => ({
   uid: 'ABC-123',
   username: 'El_Papi23',

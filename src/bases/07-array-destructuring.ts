@@ -14,6 +14,11 @@ console.log(letters, numbers);
 
 // Tarea:
 
+/*
+ al usar as const, le indicas a TypeScript que el arreglo es inmutable y debe ser 
+ tratado como una tupla, lo que le permite inferir tipos específicos para cada elemento. 
+ Esto es fundamental para garantizar la seguridad de tipos en tu código. 
+ */
 const useState = (value: string) => {
   return [
     value,
