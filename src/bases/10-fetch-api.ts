@@ -1,6 +1,6 @@
 import type { GiphyRandomResponse, Gif } from '../data/giphy.response';
 
-const API_KEY = 'EOkVlTm41v1dJn3aFYvY4GQyrNGHH6RH';
+const API_KEY = 'KyjKOvfMVFPYJTxWlJW9CvNjTzqmKpUD';
 
 const myRequest = fetch(
   `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`

@@ -2,14 +2,22 @@ const person = {
   name: 'Tony',
   age: 45,
   key: 'Ironman',
+  rango: 'Soldado',
 };
 
-const { key, name: ironmanName, age } = person;
+console.log('1. person', person);
+
+// destructuración de name, pero se le cambia el nombre a ironmanName
+const { name:ironmanName, age:edad, key } = person;
+console.log("2");
+console.log({ironmanName, edad, key});
+
+//const { key, name: ironmanName, age } = person;
 
 // const name = person.name;
 // const age = person.age;
 // const key = person.key;
-console.log({ ironmanName, age, key });
+//console.log({ ironmanName, age, key });
 
 interface Hero {
   name: string;
@@ -23,19 +31,38 @@ const useContext = ({ key, name, age, rank = 'sin rango' }: Hero) => {
   return {
     keyName: key,
     user: {
-      name,
+      name, 
       age,
     },
-    rank,
-  };
-};
+    rank: rank,
+  }
+}
+// name y age doble destructurados
+const { rank, keyName, user: { name, age } } = useContext(person);
+console.log("3")
+console.log({rank, keyName, name, age});
 
-const {
-  rank,
-  keyName,
-  user,
-  // user: { name },
-} = useContext(person);
-const { name } = user;
+// const useContext = ({ key, name, age, rank = 'sin rango' }: Hero) => {
+//   return {
+//     keyName: key,
+//     user: {
+//       name,
+//       age,
+//     },
+//     rank,
+//   };
+// };
 
-console.log({ rank, keyName, name });
+// const context = useContext(person);
+// console.log("Context")
+// console.log(context)
+
+// const {
+//   rank,
+//   keyName,
+//   user,
+//   // user: { name },
+// } = useContext(person);
+// const { name } = user;
+
+// console.log({ rank, keyName, name });

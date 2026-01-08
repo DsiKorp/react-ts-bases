@@ -4,7 +4,9 @@ export interface Hero {
   owner: Owner; // <----
 }
 
-// type Owner = 'DC' | 'Marvel';
+// type se usa para definir un conjunto de valores posibles
+//type Owner = 'DC' | 'Marvel';
+
 export enum Owner {
   DC = 'DC', // 0 // 'DC'
   Marvel = 'Marvel', // 1 // 'Marvel'
@@ -34,7 +36,8 @@ export const heroes: Hero[] = [
   {
     id: 5,
     name: 'Wolverine',
-    owner: Owner.Marvel,
+        owner: Owner.Marvel,
+
   },
   {
     id: 6,
